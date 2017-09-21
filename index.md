@@ -22,10 +22,10 @@ Place: Dragas, r. 1117 (with option to move rooms after the first class)
 ), [LaTeX](https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-1), [GitHub](https://guides.github.com/), Chapters [1](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap1.pptx), [2](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap2.pptx)
 * Week 2 - September 7 - [Chapter 3](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap3-mln.pptx)
 * Week 3 - September 14 - Student Presentations 1
-* Week 4 - September 21 - Chapter 4 
-* Week 5 - September 28 - Chapter 5 
-* Week 6 - October 5 - Student Presentations 2
-* Week 7 - October 12 - (no class)
+* Week 4 - September 21 - (no class)
+* Week 5 - September 28 - [Chapter 4](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap4-mln.pptx) 
+* Week 6 - October 5 - Chapter 5
+* Week 7 - October 12 - Student Presentations 2
 * Week 8 - October 19 - Chapter 6 
 * Week 9 - October 26 - Chapter 7 
 * Week 10 - November 2 - Student Presentations 3
@@ -39,7 +39,7 @@ Place: Dragas, r. 1117 (with option to move rooms after the first class)
 
 ### Assignments (subject to change)
 * Assignment 1: [due 2017-09-21](https://github.com/phonedude/cs834-f17/blob/master/assignments/a1.txt)
-* Assignment 2: due 2017-10-12
+* Assignment 2: [due 2017-10-12](https://github.com/phonedude/cs834-f17/blob/master/assignments/a1.txt)
 * Assignment 3: due 2017-11-09
 * Assignment 4: due 2017-11-30
 * Assignment 5: due 2017-12-14
