@@ -24,7 +24,7 @@ Place: Dragas, r. 1117 (with option to move rooms after the first class)
 * Week 3 - September 14 - Student Presentations 1
 * Week 4 - September 21 - (no class)
 * Week 5 - September 28 - [Chapter 4](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap4-mln.pptx) 
-* Week 6 - October 5 - Chapter 5
+* Week 6 - October 5 - [Chapter 5](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap5-mln.pptx)
 * Week 7 - October 12 - Student Presentations 2
 * Week 8 - October 19 - Chapter 6 
 * Week 9 - October 26 - Chapter 7 
