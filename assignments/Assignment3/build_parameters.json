@@ -1,0 +1,10 @@
+ {
+      "server" : true,
+      "fileType" : "trectext",
+      "inputPath" : "F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\en",
+      "indexpath" : "F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\index1.idx",
+      "tokenizer" : {
+        "fields" : ["docno", "head", "dateline"]
+      },
+      "nonStemmedPostings" : true
+    }

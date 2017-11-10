@@ -1,0 +1,5 @@
+Build Index Galago:
+
+galago.bat build F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\index.idx F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\wiki-small.corpus
+
+galago.bat search F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\index.idx F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\wiki-small.corpus

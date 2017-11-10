@@ -1,0 +1,34 @@
+Intital Stem Class without Co-occurence
+Stem Class: canada  canada  canadas  
+Stem Class: candid  candid  candidate  candidates  candidating  
+Stem Class: collect  collect  collectable  collected  collectible  collectibles  collecting  collection  collections  collective  collectively  collectives  collects  
+Stem Class: competit  competiting  competition  competitions  competitive  competitively  
+Stem Class: composit  composite  composites  compositing  composition  compositional  compositions  
+Stem Class: veri  veri  very  
+Stem Class: coupl  couple  coupled  couples  coupling  couplings  
+Stem Class: victoria  victoria  victoriae  victorias  
+Stem Class: weapon  weapon  weapons  
+Stem Class: defenc  defence  defences  
+
+Final Stem classes after considering co-occurence
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+
+Stem Class 
+

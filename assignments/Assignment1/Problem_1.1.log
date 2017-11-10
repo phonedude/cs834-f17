@@ -1,0 +1,227 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.17)  19 SEP 2017 16:54
+entering extended mode
+**./Problem_1.1.tex
+(Problem_1.1.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip43
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+No file Problem_1.1.aux.
+\openout1 = `Problem_1.1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen106
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks16
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 11.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+No file Problem_1.1.toc.
+\tf@toc=\write3
+\openout3 = `Problem_1.1.toc'.
+
+[1
+
+]
+Chapter 1.
+<Query1_Google.PNG, id=11, 1011.78pt x 492.33937pt>
+File: Query1_Google.PNG Graphic file (type png)
+ <use Query1_Google.PNG>
+Package pdftex.def Info: Query1_Google.PNG used on input line 22.
+(pdftex.def)             Requested size: 469.75502pt x 228.58986pt.
+
+<Query1_Bing.PNG, id=13, 1015.54407pt x 495.35063pt>
+File: Query1_Bing.PNG Graphic file (type png)
+ <use Query1_Bing.PNG>
+Package pdftex.def Info: Query1_Bing.PNG used on input line 31.
+(pdftex.def)             Requested size: 469.75502pt x 229.13387pt.
+
+[2
+
+] [3 <./Query1_Google.PNG>]
+<Query2_Google.PNG, id=21, 1015.54407pt x 495.35063pt>
+File: Query2_Google.PNG Graphic file (type png)
+ <use Query2_Google.PNG>
+Package pdftex.def Info: Query2_Google.PNG used on input line 47.
+(pdftex.def)             Requested size: 469.75502pt x 229.13387pt.
+
+<Query2_Bing.PNG, id=22, 1017.8025pt x 493.0922pt>
+File: Query2_Bing.PNG Graphic file (type png)
+ <use Query2_Bing.PNG>
+Package pdftex.def Info: Query2_Bing.PNG used on input line 56.
+(pdftex.def)             Requested size: 469.75502pt x 227.58508pt.
+
+[4 <./Query1_Bing.PNG>] [5 <./Query2_Google.PNG>]
+<Query3_Google.PNG, id=31, 1015.54407pt x 494.59781pt>
+File: Query3_Google.PNG Graphic file (type png)
+ <use Query3_Google.PNG>
+Package pdftex.def Info: Query3_Google.PNG used on input line 73.
+(pdftex.def)             Requested size: 469.75502pt x 228.78563pt.
+
+[6 <./Query2_Bing.PNG>] <Query3_Bing.PNG, id=37, 1011.02719pt x 496.10344pt>
+File: Query3_Bing.PNG Graphic file (type png)
+
+<use Query3_Bing.PNG>
+Package pdftex.def Info: Query3_Bing.PNG used on input line 82.
+(pdftex.def)             Requested size: 469.75502pt x 230.50403pt.
+ [7 <./Query3_Google.PNG>]
+<Query4_Google.PNG, id=42, 1013.28563pt x 441.14813pt>
+File: Query4_Google.PNG Graphic file (type png)
+ <use Query4_Google.PNG>
+Package pdftex.def Info: Query4_Google.PNG used on input line 98.
+(pdftex.def)             Requested size: 469.75502pt x 204.51247pt.
+
+<Query4_Bing.PNG, id=43, 1016.29688pt x 496.10344pt>
+File: Query4_Bing.PNG Graphic file (type png)
+ <use Query4_Bing.PNG>
+Package pdftex.def Info: Query4_Bing.PNG used on input line 107.
+(pdftex.def)             Requested size: 469.75502pt x 229.30798pt.
+
+[8 <./Query3_Bing.PNG>] [9 <./Query4_Google.PNG>] [10 <./Query4_Bing.PNG>]
+Chapter 2.
+[11
+
+] (Problem_1.1.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1562 strings out of 493323
+ 22293 string characters out of 3139063
+ 80291 words of memory out of 3000000
+ 5108 multiletter control sequences out of 15000+200000
+ 6669 words of font info for 24 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,6n,25p,614b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Problem_1.1.pdf (12 pages, 2009947 bytes).
+PDF statistics:
+ 70 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

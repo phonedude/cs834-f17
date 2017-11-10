@@ -1,0 +1,22 @@
+# Define 2 vectors
+newWords <- read.table("D:\\Eclipse\\CrawlWorldData\\Crawl\\Problem4.1\\logfrequency.txt", header=T)
+bigrams <- read.table("D:\\Eclipse\\CrawlWorldData\\Crawl\\Problem4.1\\logrank.txt", header=T)
+newWords1 <- read.table("D:\\Eclipse\\CrawlWorldData\\Crawl\\Problem4.1\\bigramsfrequnecy.txt", header=T)
+bigrams1 <- read.table("D:\\Eclipse\\CrawlWorldData\\Crawl\\Problem4.1\\bigramsrank.txt", header=T)
+X <- c(0,1,2,3,4,5)
+Y <- c(5,4,3,2,1,0)
+# Graph cars using a y axis that ranges from 0 to 12
+plot(bigrams$Rank, newWords$Frequency,  type="o", col="blue",xlab="Log of Rank", ylab="Log of Frequency",)
+lines(bigrams1$Rank, newWords1$Frequency,type="o", pch=22, lty=2, col="red")
+lines(X, Y,type="o", pch=22, lty=2, col="black")
+# Create a title with a red, bold/italic font
+title(main="Heap's Law", col.main="red", font.main=4)
+
+
+
+
+
+
+
+v= kn^B
+k=

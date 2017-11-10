@@ -1,0 +1,90 @@
+//Function location dictionary return Trues in case of hit or False if it is a miss.
+locationDictionary(word)
+
+//Splitting query terms for a query 
+
+splitQuery(query){
+	if(query.length == 1){
+		if("=" in query){
+			queryTerms <- split query by = 
+		}
+		else if("&" in query){
+			queryTerms <- split query by &
+		}
+		else if("-"in query){
+			queryTerms <- split query by -
+		}
+		else if(":"in query){
+			queryTerms <- split query by :
+		}
+		else if(","in query){
+			queryTerms <- split query by ,
+		}
+	}
+	else{
+		queryTerms <- split query by whitespace
+		if "=" or "&" or "-" or ":" or "," in queryTerms{
+			Deleted from the list of queryTerms
+		}
+	}
+	return queryTerms
+}
+
+//Find locations in queryTerms
+
+findLocation(queryTerms){
+	if (locationDictionary(queryTerms)){
+		//Location identified in query
+		//Use the location in indexing results for the query
+		exit 0
+	}
+	else{
+		for(i in 0 to queryTerms.length){
+			if(locationDictionary(queryTerms[i])){
+				index = i
+				break
+			}
+		}
+		for(i in index-1 to 0){
+			if(queryModified == "" ){
+				queryModified = queryTerms[i] + queryTerms[index]
+				if (locationDictionary(queryModified)){
+					//Location identified in query
+					//Use the location in indexing results for the query
+					exit 0
+				}
+			} 
+			else{
+				queryModified = queryTerms[i] + queryModified
+				if (locationDictionary(queryModified)){
+					//Location identified in query
+					//Use the location in indexing results for the query
+					exit 0
+				}
+			}	
+		}
+		for(i in index+1 to queryTerms.length){
+			if(queryModified == "" ){
+				queryModified = queryTerms[index] + queryTerms[i]
+				if (locationDictionary(queryModified)){
+					//Location identified in query
+					//Use the location in indexing results for the query
+					exit 0
+				}
+			}
+			else{
+				queryModified = queryModified + queryTerms[i]
+				if (locationDictionary(queryModified)){
+					//Location identified in query
+					//Use the location in indexing results for the query
+					exit 0
+				}
+			}
+		}
+		
+	}
+}
+
+
+	
+

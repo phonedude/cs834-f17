@@ -1,0 +1,43 @@
+{
+  "corpus" : true,
+  "corpusParameters" : {
+    "blockSize" : 512,
+    "filename" : "F:\\Fall2017\\InformationRetreival\\Assignment3\\Problem6_2\\index_mybuild.idx\\corpus",
+    "mergerClass" : "org.lemurproject.galago.core.index.merge.CorpusMerger",
+    "readerClass" : "org.lemurproject.galago.core.index.corpus.CorpusReader",
+    "tokenizer" : {
+      "fields" : [ ],
+      "formats" : {
+
+      }
+    },
+    "writerClass" : "org.lemurproject.galago.core.index.corpus.CorpusFolderWriter"
+  },
+  "fieldIndex" : false,
+  "fieldIndexParameters" : {
+    "nonStemmedPostings" : true,
+    "stemmedPostings" : true,
+    "stemmer" : [ "krovetz"]
+  },
+  "filePath" : "F:\\Fall2017\\InformationRetreival\\Assignment3\\Problem6_2\\wiki-small.corpus",
+  "galagoVersion" : "3.12",
+  "galagoVersionBuildDateTime" : "2017-11-09 04:25",
+  "indexBuildDateTime" : "2017-11-09 00:21",
+  "indexPath" : "F:\\Fall2017\\InformationRetreival\\Assignment3\\Problem6_2\\index_mybuild.idx",
+  "inputPath" : [ ],
+  "nonStemmedPostings" : true,
+  "skipDistance" : 500,
+  "skipping" : true,
+  "stemmedCounts" : false,
+  "stemmedPostings" : true,
+  "stemmer" : [ "krovetz"],
+  "stemmerClass" : {
+    "krovetz" : "org.lemurproject.galago.core.parse.stem.KrovetzStemmer"
+  },
+  "tokenizer" : {
+    "fields" : [ ],
+    "formats" : {
+
+    }
+  }
+}
