@@ -1,0 +1,45 @@
+K means output for cluster size : 3
+Clusters index of points
+[2 2 2 2 0 0 1 1 1 1]
+Center of Clusters
+[[  1.00000000e+00   5.55111512e-17]
+ [  3.00000000e+00   3.00000000e+00]
+ [ -2.50000000e+00  -2.00000000e+00]]
+Spherical K means output for cluster size : 4
+Clusters index of points
+[3 3 3 1 2 0 0 0 0 0]
+Center of Clusters
+[[ 0.70710678  0.70710678]
+ [-0.4472136  -0.89442719]
+ [ 0.70710678 -0.70710678]
+ [-0.81836024 -0.57470559]]
+K means output for cluster size : 2
+Clusters index of points
+[0 0 0 0 0 1 1 1 1 1]
+Center of Clusters
+[[-1.8 -1.8]
+ [ 2.6  2.6]]
+Spherical K means output for cluster size : 4
+Clusters index of points
+[3 3 3 0 2 1 1 1 1 1]
+Center of Clusters
+[[-0.4472136  -0.89442719]
+ [ 0.70710678  0.70710678]
+ [ 0.70710678 -0.70710678]
+ [-0.81836024 -0.57470559]]
+K means output for cluster size : 4
+Clusters index of points
+[2 2 0 0 3 3 1 1 1 1]
+Center of Clusters
+[[ -1.50000000e+00  -2.00000000e+00]
+ [  3.00000000e+00   3.00000000e+00]
+ [ -3.50000000e+00  -2.00000000e+00]
+ [  1.00000000e+00   5.55111512e-17]]
+Spherical K means output for cluster size : 4
+Clusters index of points
+[3 3 3 1 2 0 0 0 0 0]
+Center of Clusters
+[[ 0.70710678  0.70710678]
+ [-0.4472136  -0.89442719]
+ [ 0.70710678 -0.70710678]
+ [-0.81836024 -0.57470559]]
