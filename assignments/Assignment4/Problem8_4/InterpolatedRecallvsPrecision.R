@@ -9,4 +9,4 @@ plot(query_merge$Recall, query_merge$Precision,xlab = "Recall", ylab = "Precisio
 lines(query1$Recall,query1$Precision,type = "o",col = "black", pch = 22, lty = 1)
 lines(query2$Recall,query2$Precision,type = "o",col = "red", pch = 22 ,lty = 2)
 
-legend("bottomright", c("Query1","Query2"), col=c("black", "red"),pch=22, lty=1:2)
+legend("topright", c("Query1","Query2"), col=c("black", "red"),pch=22, lty=1:2)
