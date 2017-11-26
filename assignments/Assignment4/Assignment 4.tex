@@ -32,6 +32,12 @@
     showtabs=false,                  
     tabsize=2
 }
+
+\lstdefinestyle{DOS}
+{
+    backgroundcolor=\color{black},
+    basicstyle=\scriptsize\color{white}\ttfamily
+}
  
 \lstset{style=mystyle}
 \renewcommand{\baselinestretch}{2}
@@ -47,139 +53,137 @@ For one query in the CACM collection (provided at the book website), generate a 
 \section{Solution}
 This problem uses CACM corpus provided in the test collection of the book. The queries ran against the CACM collection have been used from the processed queries section of the CACM test collection.\\
 
-\subsection{Query: Code optimization for space efficiency}
-The table below has been created manuallyby looking at the search results of the query. The first column in the table is the position in the search result,  the second column is whether the document is relevant or not and last column is the relevance score in range of 0 to 3 where 0 is for no relevance and 3 is assigned to document with high relevance.
+\subsection{Query:interested in articles on robotics  motion planning particularly the geometric and combinatorial aspects   we are not interested in the dynamics of arm motion}
 
-\begin{table}[]
-\centering
-\caption{Relevance Table for Query:Code optimization for space efficiency }
-\label{my-label}
-\begin{tabular}{lll}
-Index & Relevant & Relevance Score \\
-1     & Yes      & 3               \\
-2     & No       & 1               \\
-3     & No       & 1               \\
-4     & Yes      & 2               \\
-5     & No       & 0               \\
-6     & No       & 0               \\
-7     & Yes      & 3               \\
-8     & No       & 0               \\
-9     & No       & 0               \\
-10    & Yes      & 2              
-\end{tabular}
-\end{table} 
+The below xml file shows the query which was used in galago.\\
+\lstinputlisting{Problem8_3/onequery.xml}
 
-\subsubsection{ Precision}
+\begin{lstlisting}[style=DOS]
+F:\Fall2017\InformationRetreival\Assignment3\Galgo\galagosearch-1.04-bin\galagosearch-1.04\bin>galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=10 F:\Fall2017\InformationRetreival\Assignment4\onequery.xml > F:\Fall2017\InformationRetreival\Assignment4\cacm_onequery.list
+\end{lstlisting}
 
-$Precision(1) = 1/1 = 1$\\
-$Precision(2) = 1/2 = 0.5$\\ 
+The below list file is result of batch search for the query from galago with number of results for each query set to 10.
+\verbatiminput{Problem8_3/cacm_onequery.list}
+
+\begin{lstlisting}[style=DOS]
+F:\Fall2017\InformationRetreival\Assignment3\Galgo\galagosearch-1.04-bin\galagosearch-1.04\bin> galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\cacm_onequery.list  F:\Fall2017\InformationRetreival\Assignment4\cacm.rel >F:\Fall2017\InformationRetreiva\Assignment4\onequeryoutput.txt
+\end{lstlisting}
+
+The below text file is the result of eval command by using the relevance judgments file provided in cacm test collections.
+\verbatiminput{Problem8_3/onequeryoutput.txt}
+
+The calculation of precision for the ranking was done with the help of relevance judgements provided with the test collection. It contains list of all the documents relevant to a collection. Below is the list of relevant documents for query 6.
+
+\verbatiminput{Problem8_3/relevancefeedback.rel}
+
+\subsubsection{ Precision at 10}
+
+$Precision(1) = 0/1 = 0$\\
+$Precision(2) = 0/2 = 0$\\ 
 $Precision(3) = 1/3 = 0.33$\\
-$Precision(4) = 2/4 = 0.5$\\
+$Precision(4) = 1/4 = 0.25$\\
 $Precision(5) = 2/5 = 0.4$\\
-$Precision(6) = 2/6 = 0.33$\\
-$Precision(7) = 3/7 = 0.43$\\
+$Precision(6) = 3/6 = 0.5$\\
+$Precision(7) = 3/7 = 0.429$\\
 $Precision(8) = 3/8 = 0.375$\\
 $Precision(9) = 3/9 = 0.33$\\
-$Precision(10) = 4/10 = 0.4$\\
+$Precision(10) = 3/10 = 0.3$\\
 where Precision(6) denotes precision at search result 6.\\
-The precision for this query is 0.4. \\  
+The Precision(10) for this query is 0.3. \\  
 
+\subsubsection{Mean Average Precision}
+
+$MAP = 1/3 (1/3 + 2/5 + 3/6) $\\
+$MAP = 0.41$
 \subsubsection{Reciprocal Rank}
-$MRR = 1/1 + 1/4 + 1/7 + 1/10$\\
-$MRR = 1+ 0.25 + 0.143 + 0.1$\\
-$MRR = 1.493$\\
-MRR is the mean reciprocal rank for the query. For this query, the relevant results are present at position 1, 4, 7 and 10.\\
-The MRR for the result is calculated to be 1.493.
+The first relevant document is at position 3.\\
+$RR = 1/3 $\\
+$RR = 0.333$\\
 
 \subsubsection{Normalized Discounted Cummulative Gain at 5}
 
-Below is the list of documents D1 through D5 and their relevance scores. This data has been reused from table 1.1.\\
-Documents: D1, D2, D3, D4, D5\\
-Relevance Score: 3, 1, 1, 2, 0\\
-$CG_5 = 3+ 1+ 1+ 2+ 0$\\
-$CG_5 = 7$ \\
+Relevance Score: 0, 0, 1, 0, 1\\
+$CG_5 = 0+ 0+ 1+ 0+ 1$\\
+$CG_5 = 2$ \\
 \begin{table}[]
 \centering
 \caption{Discounted Cummulative Gain}
 \label{my-label}
 \begin{tabular}{llll}
 i & $rel_i$ & $log_2(i + 1)$   & $rel_i / log_2(i + 1)$  \\
-1 & 3        & 1     		    & 3    \\
-2 & 1        & 1.585 		    & 0.63 \\
+1 & 0        & 1     		    & 0   \\
+2 & 0        & 1.585 		    & 0 \\
 3 & 1        & 2     		    & 0.5  \\
-4 & 2        & 2.322 		    & 0.86 \\
-5 & 0        & 2.585 		    & 0   
+4 & 0        & 2.322 		    & 0 \\
+5 & 1        & 2.585 		    & 0.387   
 \end{tabular}
 \end{table}
 $DCG = \sum\limits_{i=1}^5 rel_i / log_2(i + 1)$ \\
-$DCG = 3 + 0.63 + 0.5 + 0.86 + 0 =  4.99$\\
+$DCG = 0 + 0 + 0.5 + 0 + 0.387 =  0.887$\\
+
 Ideal Discounted Cummulative Gain has the document and relevance score as below:\\
-Documents: D1, D4, D2, D3, D5\\
-Relevance Score: 3, 2, 1, 1, 0\\
-$CG_5 = 3+ 2+ 1+ 1+ 0$\\
-$CG_5 = 7$ \\
+Relevance Score: 1, 1, 0, 0, 0\\
+$CG_5 = 1+ 1+ 0+ 0+ 0$\\
+$CG_5 = 2$ \\
 \begin{table}[]
 \centering
 \caption{Ideal Discounted Cummulative Gain}
 \label{my-label}
 \begin{tabular}{llll}
 i & $rel_i$ & $log_2(i + 1)$   & $rel_i / log_2(i + 1)$  \\
-1 & 3        & 1     		    & 3    \\
-2 & 2        & 1.585 		    & 1.26 \\
-3 & 1        & 2     		    & 0.5  \\
-4 & 1        & 2.322 		    & 0.43 \\
+1 & 1        & 1     		    & 1    \\
+2 & 1        & 1.585 		    & 0.631 \\
+3 & 0        & 2     		    & 0  \\
+4 & 0        & 2.322 		    & 0 \\
 5 & 0        & 2.585 		    & 0   
 \end{tabular}
 \end{table}
 $IDCG = \sum\limits_{i=1}^5 rel_i / log_2(i + 1)$ \\
-$IDCG = 3 + 1.26 + 0.5 + 0.43 + 0 =  5.19$\\
+$IDCG = 1 + 0.631 + 0 + 0 + 0 =  1.631$\\
 Normalized Discounted Cummulative Gain (NDCG)=  DCG / IDCG\\
-$NDCG = 4.99 / 5.19 = 0.96$
+$NDCG = 0.887 / 1.631 = 0.544$
 
 \subsubsection{Normalized Discounted Cummulative Gain at 10}
 
-Below is the list of documents D1 through D10 and their relevance scores. This data has been reused from table 1.1.\\
-Documents: D1, D2, D3, D4, D5, D6, D7, D8, D9, D10\\
-Relevance Score: 3, 1, 1, 2, 0, 0, 3, 0, 0, 2\\
-$CG_{10} = 3+ 1+ 1+ 2+ 0 + 0 + 3 + 0 + 0 + 2$\\
-$CG_{10}= 12$ \\
+Relevance Score: 0, 0, 1, 0, 1, 1, 0, 0, 0, 0\\
+$CG_{10} = 0+ 0+ 1+ 0+ 1 + 1 + 0 + 0 + 0 + 0$\\
+$CG_{10}= 3$ \\
 \begin{table}[]
 \centering
 \caption{Discounted Cummulative Gain}
 \label{my-label}
 \begin{tabular}{llll}
 i & $rel_i$ & $log_2(i + 1)$   & $rel_i / log_2(i + 1)$  \\
-1 & 3        & 1     		    & 3    \\
-2 & 1        & 1.585 		    & 0.63 \\
+1 & 0        & 1     		    & 0    \\
+2 & 0        & 1.585 		    & 0 \\
 3 & 1        & 2     		    & 0.5  \\
-4 & 2        & 2.322 		    & 0.86 \\
-5 & 0        & 2.585 		    & 0 \\ 
-6 & 0        & 2.807     	    & 0    \\
-7 & 3        & 3 		    & 1 \\
+4 & 0        & 2.322 		    & 0 \\
+5 & 1        & 2.585 		    & 0.387 \\ 
+6 & 1        & 2.807     	    & 0.356    \\
+7 & 0        & 3 		    & 1 \\
 8 & 0        & 3.17    		    & 0  \\
 9 & 0        & 3.22 		    & 0 \\
-10 & 2      & 3.459 		    & 0.578 \\ 
+10 & 0      & 3.459 		    & 0 \\ 
 \end{tabular}
 \end{table}
 $DCG = \sum\limits_{i=1}^{10} rel_i / log_2(i + 1)$ \\
-$DCG = 3 + 0.63 + 0.5 + 0.86 + 0 + 0 + 1 + 0 + 0 + 0.578 =  6.568$\\
+$DCG = 0 + 0 + 0.5 + 0 + 0.387 + 0.356 + 0 + 0 + 0 + 0 =  1.243$\\
 Ideal Discounted Cummulative Gain has the document and relevance score as below:\\
-Documents: D1, D7, D4, D10, D2, D3, D5, D6, D8, D9\\
-Relevance Score: 3, 3, 2, 2, 1, 1, 0, 0 , 0 , 0 \\
-$CG_{10} = 3+ 3 + 2+ 2+ 1+ 1+ 0 + 0 + 0 + 0$\\
-$CG_{10} = 12$ \\
+Relevance Score: 1, 1, 1, 0, 0, 0, 0, 0 , 0 , 0 \\
+$CG_{10} = 1+ 1 + 1+ 0+ 0+ 0+ 0 + 0 + 0 + 0$\\
+$CG_{10} = 3$ \\
 \begin{table}[]
 \centering
 \caption{Ideal Discounted Cummulative Gain}
 \label{my-label}
 \begin{tabular}{llll}
 i & $rel_i$ & $log_2(i + 1)$   & $rel_i / log_2(i + 1)$  \\
-1 & 3        & 1     		    & 3    \\
-2 & 3        & 1.585 		    & 1.89 \\
-3 & 2        & 2     		    & 1  \\
-4 & 2        & 2.322 		    & 0.86 \\
-5 & 1        & 2.585 		    & 0.387 \\ 
-6 & 1        & 2.807     	    & 0.356    \\
+1 & 1        & 1     		    & 1    \\
+2 & 1        & 1.585 		    & 0.61 \\
+3 & 1        & 2     		    & 0.5  \\
+4 & 0        & 2.322 		    & 0 \\
+5 & 0        & 2.585 		    & 0 \\ 
+6 & 0        & 2.807     	    & 0   \\
 7 & 0        & 3 		    & 0 \\
 8 & 0        & 3.17    		    & 0  \\
 9 & 0        & 3.22 		    & 0 \\
@@ -187,69 +191,37 @@ i & $rel_i$ & $log_2(i + 1)$   & $rel_i / log_2(i + 1)$  \\
 \end{tabular}
 \end{table}
 $IDCG = \sum\limits_{i=1}^{10} rel_i / log_2(i + 1)$ \\
-$IDCG = 3 + 1.89 + 1 + 0.86 + 0.387 + 0.356 + 0 + 0 + 0 + 0 =  7.493$\\
+$IDCG = 1 + 0.61 + 1 + 0.5 + 0 + 0 + 0 + 0 + 0 + 0 =  2.11$\\
 Normalized Discounted Cummulative Gain (NDCG)=  DCG / IDCG\\
-$NDCG = 6.568 / 7.493 = 0.977$
+$NDCG = 1.243 / 2.11 = 0.589$
 
 \chapter{Problem 8.4}
 \section{Problem Statement}
 For two queries in the CACM collection, generate two uninterpolated recall precision graphs, a table of interpolated precision values at standard recall levels, and the average interpolated recall-precision graph.
 \section{Solution}
 This problem uses CACM corpus provided in the test collection of the book. The queries ran against the CACM collection have been used from the processed queries section of the CACM test collection.\\
-\subsection{Query: Code optimization for space efficiency}
+\subsection{Query: Interested in articles on robotics  motion planning particularly the geometric and combinatorial aspects   we are not interested in the dynamics of arm motion}
 
-\begin{table}[]
-\centering
-\caption{Relevance table for Query: Code optimization for space efficiency}
-\label{my-label}
-\begin{tabular}{ll}
-index & relevant \\
-1     & yes      \\
-2     & no       \\
-3     & no       \\
-4     & yes      \\
-5     & no       \\
-6     & no       \\
-7     & yes      \\
-8     & no       \\
-9     & no       \\
-10    & yes     
-\end{tabular}
-\end{table}
+The below list file is result of batch search for the query from galago with number of results for each query set to 10.
+\verbatiminput{Problem8_3/cacm_onequery.list}
 
 
 \begin{table}[]
 \centering
-\caption{Precision and Recall Table for Query:  Code optimization for space efficiency}
+\caption{Precision and Recall Table for Query 6}
 \label{my-label}
 \begin{tabular}{lllllllllll}
 Index     & 1    & 2    & 3    & 4   & 5   & 6    & 7     & 8     & 9    & 10  \\
-Relevant  & yes  & no   & no   & yes & no  & no   & yes   & no    & no   & yes \\
-Recall    & 0.25 & 0.25 & 0.25 & 0.5 & 0.5 & 0.5  & 0.75  & 0.75  & 0.75 & 1   \\
-Precision & 1.0  & 0.5  & 0.33 & 0.5 & 0.4 & 0.33 & 0.429 & 0.375 & 0.33 & 0.4
+Relevant  & no  & no   & yes   & no & yes  & yes   & no   & no    & no   & no \\
+Recall    & 0 & 0 & 0.33 & 0.33 & 0.67 & 1  & 1  & 1  & 1 & 1   \\
+Precision & 0  & 0  & 0.33 & 0.25 & 0.4 & 0.5 & 0.429 & 0.375 & 0.33 & 0.3
 \end{tabular}
 \end{table}
 
 \subsection{Query: Parallel algorithms}
 
-\begin{table}[]
-\centering
-\caption{Relevance table for Query:  Parallel algorithms}
-\label{my-label}
-\begin{tabular}{ll}
-index & relevant \\
-1     & no       \\
-2     & yes      \\
-3     & yes      \\
-4     & yes      \\
-5     & yes      \\
-6     & yes      \\
-7     & no       \\
-8     & yes      \\
-9     & yes      \\
-10    & no      
-\end{tabular}
-\end{table}
+The below list file is result of batch search for the query from galago with number of results for each query set to 10.
+\verbatiminput{Problem8_4/cacm_onequery.list}
 
 \begin{table}[]
 \centering
@@ -257,9 +229,9 @@ index & relevant \\
 \label{my-label}
 \begin{tabular}{lllllllllll}
 Index     & 1   & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9    & 10  \\
-Relevant  & no  & yes   & yes   & yes   & yes   & yes   & no    & yes   & yes  & no  \\
-Recall    & 0.0 & 0.143 & 0.286 & 0.429 & 0.571 & 0.714 & 0.714 & 0.857 & 1    & 1   \\
-Precision & 0.0 & 0.5   & 0.67  & 0.75  & 0.8   & 0.833 & 0.714 & 0.75  & 0.78 & 0.7
+Relevant  & no  & no   & yes   & no   & no   & yes   & no    & yes   & yes  & yes  \\
+Recall    & 0 & 0 & 0.2 & 0.2 & 0.2 & 0.4 & 0.4 & 0.6 & 0.8    & 1   \\
+Precision & 0 & 0   & 0.33  & 0.25  & 0.2   & 0.33 & 0.286 & 0.375  & 0.44 & 0.5
 \end{tabular}
 \end{table}
 
@@ -283,9 +255,9 @@ Precision & 0.0 & 0.5   & 0.67  & 0.75  & 0.8   & 0.833 & 0.714 & 0.75  & 0.78 &
 \label{my-label}
 \begin{tabular}{llllllllllll}
 Recall          & 0.0   & 0.1   & 0.2   & 0.3   & 0.4   & 0.5   & 0.6   & 0.7   & 0.8  & 0.9  & 1    \\
-Ranking 1       & 1     & 1     & 1     & 0.5   & 0.5   & 0.5   & 0.429 & 0.429 & 0.4  & 0.4  & 0.4  \\
-Ranking 2       & 0.833 & 0.833 & 0.833 & 0.833 & 0.833 & 0.833 & 0.833 & 0.833 & 0.78 & 0.78 & 0.78 \\
-Average Ranking & 0.917 & 0.917 & 0.917 & 0.667 & 0.667 & 0.667 & 0.631 & 0.631 & 0.59 & 0.59 & 0.59
+Ranking 1       & 0.5     & 0.5     & 0.5     & 0.5   & 0.5   & 0.5   & 0.5 & 0.5 & 0.5  & 0.5  & 0.5  \\
+Ranking 2       & 0.5     & 0.5     & 0.5     & 0.5   & 0.5   & 0.5   & 0.5 & 0.5 & 0.5  & 0.5  & 0.5  \\
+Average Ranking  & 0.5     & 0.5     & 0.5     & 0.5   & 0.5   & 0.5   & 0.5 & 0.5 & 0.5  & 0.5  & 0.5  \\
 \end{tabular}
 \end{table}
 
@@ -296,39 +268,101 @@ Average Ranking & 0.917 & 0.917 & 0.917 & 0.667 & 0.667 & 0.667 & 0.631 & 0.631 
   \label{fig:1}
 \end{figure}
 
+Both the queries show their highest precision of 0.5 at recall of 1. This results in a interpolated recall-precision graph to be a straight horizontal line at precision 0.5.
+
+\chapter{Problem 8.5}
+\section{Problem}
+Generate the mean average precision, recall-precision graph, average NDCG at 5 and 10, and precision at 10 for the entire CACM query set.
+\section{Solution}
+The results have been calculated by galago batch-search for rank result of 10. Galago provides NDCG 5 and 15 but not 10. So, by making a request for 10 results per query the NDCG15 is same as NDCG10 beacause all the calculations are based on 10 results for each query.
+
+The values for MAP is lesser than Precision at 10 for the CACM query set. Th query sets having most of their relevant results at top indexes (between 1 and 5) have higher or equal NCDG5 and NCDG10, but for queries with most of their relevant documents lower in the rank (between 6 and 10 ) have higher NCDG10 than NCDG5. 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{Problem8_5/MAP.png}
+  \caption{MAP values for CACM Query Set}
+  \label{fig:1}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{Problem8_5/NCDG5.png}
+  \caption{NCDG5 values for CACM Query Set}
+  \label{fig:1}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{Problem8_5/NCDG10.png}
+  \caption{NCDG10 values for CACM Query Set}
+  \label{fig:1}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{Problem8_5/P10.png}
+  \caption{Precision at 10 values for CACM Query Set}
+  \label{fig:1}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{Problem8_5/Recall.png}
+  \caption{Recall values for CACM Query Set}
+  \label{fig:1}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{Problem8_5/RecallvsPrecision.png}
+  \caption{Recall vs Precision for CACM Query Set}
+  \label{fig:1}
+\end{figure}
+
+\chapter{Problem 8.7}
+\section{Problem}
+Another measure that has been used in a number of evaluations is R-precision. This is defined as the precision at R documents, where R is the number of relevant documents for a query. It is used in situations where there is a large variation in the number of relevant documents per query. Calculate the average R-precision for the CACM query set and compare it to the other measures.
+\section{Solution}
+R-precision is defined as precision at R documents, where R is the number of relevant documents for a query. In context to the CACM query set, the relevance judgements file suggests that all the queries have varied number of relevant documents. It ranges from 0 to 51. So, for calculating R-precision number of relevant documents per query is set to 51 and evaluated in the galago.
+The results for the different measures inclusive of R-precision at relevant document 51 are ahown in the table:
+
+
+\begin{table}[]
+\centering
+\caption{CACM Query Set measured against different measures}
+\label{my-label}
+\begin{tabular}{llllllllllll}
+map          &0.2840  \\
+ndcg         &  0.4419     \\
+ndcg15     & 0.4734  \\
+R-prec      & 0.3192 \\
+bpref        & 0.0000 \\
+recip\_rank & 0.7296 \\
+P5            & 0.3922 \\
+P10          & 0.2980 \\
+P15          & 0.2614 \\
+P20          & 0.2373 \\
+P30          & 0.1843  
+\end{tabular}
+\end{table}
+
 \chapter{Problem 8.9}
 \section{Problem}
 For one query in the CACM collection, generate a ranking and calculate BPREF. Show that the two formulations of BPREF give the same value.
 \section{Solution}
-The solution is based on relevance results for query, code optimization for space efficiency. The Table 4.1 shows the relevance results for the query. The relevance results show the search results had 4 relevant documents and 6 non- relevant documents. 
+The solution is based on relevance results for query, interested in articles on robotics  motion planning particularly the geometric and combinatorial aspects   we are not interested in the dynamics of arm motion . The Table 5.1 shows the relevance results for the query. The relevance results show the search results had 3 relevant documents and 7 non- relevant documents. 
 
-\begin{table}[]
-\centering
-\caption{Relevance table for Query: Code optimization for space efficiency}
-\label{my-label}
-\begin{tabular}{ll}
-index & relevant \\
-1     & yes      \\
-2     & no       \\
-3     & no       \\
-4     & yes      \\
-5     & no       \\
-6     & no       \\
-7     & yes      \\
-8     & no       \\
-9     & no       \\
-10    & yes     
-\end{tabular}
-\end{table}
+\verbatiminput{Problem8_3/cacm_onequery.list}
 
 \subsection{Calculating BPREF}
 
-$BPREF = 1/R \sum\limits_{d_r}^{}(1- ({N_{d_r}} / R))$
+$BPREF = 1/R \sum\limits_{d_r}^{}(1- ({N_{d_r}} / min(R,N))$
 
-where R is the number of non-relevant documents that are considered\\
+where R is the number of relevant documents that are considered\\
+N is the number of non-relevant documents that are considered\\
 $d_r$ is the number of relevant documents\\
  
-For a query result with 4 relevant documents R is 4 implying that first 4 non-relevant documents are considered. The relevance table for the query is manipulated for BPREF as,\\
+For a query result with 3 relevant documents R is 3 implying that first 3 non-relevant documents are considered. The relevance table for the query is manipulated for BPREF as,\\
 
 \begin{table}[]
 \centering
@@ -336,19 +370,18 @@ For a query result with 4 relevant documents R is 4 implying that first 4 non-re
 \label{my-label}
 \begin{tabular}{ll}
 Index & Relevance \\
-1     & Yes       \\
+1     & No       \\
 2     & No        \\
-3     & No        \\
-4     & Yes       \\
-5     & No        \\
-6     & No        \\
-7     & Yes       \\
-10    & Yes      
+3     & Yes        \\
+4     & No       \\
+5     & Yes        \\
+6     & Yes      
+
 \end{tabular}
 \end{table}
-$BPREF = 1/R \sum\limits_{d_r}^{}(1- ({N_{d_r}} / R))$\\
-$BPREF = 1/4[(1-0/4) + (1 - 2/4) + (1- 4/4) + (1- 4/4)]$\\
-$BPREF = 1/4 [1 + (1/2) + 0 + 0] = 3/8 = 0.375$
+$BPREF = 1/R \sum\limits_{d_r}^{}(1- ({N_{d_r}} / min(R,N))$\\
+$BPREF = 1/3[(1-2/3) + (1 - 3/3) + (1- 3/3)]$\\
+$BPREF = 1/3 [(1/3) + 0 + 0] = 3/8 = 0.11$
 
 \subsection{Calculating BPREF based on preference}
 
@@ -356,12 +389,13 @@ $BPREF = P /( P + Q)$\\
 where P is the number of relevant documents \\
           Q is the number of non-relevant documents\\
 For query: Code optimization for space efficiency\\
-P = 4\\
-Q = 6\\
-$BPREF = 4/(4+6)$\\
-$BPREF = 0.4$\\
+P = 3\\
+Q = 3\\
+$BPREF = 3/(3+3)$\\
+$BPREF = 0.5$\\
 
-The value of BPREF is 0.375 and 0.4 by computing respectively with relevant documents formula and the clickthrough preference formula.
+The value of BPREF is 0.11 and 0.3 by computing respectively with relevant documents formula and the clickthrough preference formula. The values computed are not equal because the bpref for clickthough formula does not take into account the ranking of relevant results and the value for BPREF with relevant documents formula dips due to the fist relevant result showing aftr two non-relevant result and the rest two relevant result appear after all the non-relevant documents taken in consideration. Thus, the last wo relevant documents do not add any value to the BPREF.
+ 
 \chapter{Problem 9.8}
 \section{Problem}
 Cluster the following set of two-dimensional instances into three clusters using each of the five agglomerative clustering methods:

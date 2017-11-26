@@ -4,7 +4,7 @@ query1 <- read.csv("Interpolated_query1.csv", header = TRUE)
 
 query1$Recall
 plot(query_merge$Recall, query_merge$Precision,xlab = "Recall", ylab = "Precision",ylim=c(0,1)
-     ,main = "Recall vs Precision Graph", pch=22, col = query_merge$Type)
+     ,main = "Interpolated Recall vs Precision Graph", pch=22, col = query_merge$Type)
 
 lines(query1$Recall,query1$Precision,type = "o",col = "black", pch = 22, lty = 1)
 lines(query2$Recall,query2$Precision,type = "o",col = "red", pch = 22 ,lty = 2)

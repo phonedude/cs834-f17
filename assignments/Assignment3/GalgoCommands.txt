@@ -3,3 +3,34 @@ Build Index Galago:
 galago.bat build F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\index.idx F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\wiki-small.corpus
 
 galago.bat search F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\index.idx F:\Fall2017\InformationRetreival\Assignment3\Problem6_2\wiki-small.corpus
+
+
+galago.bat build F:\Fall2017\InformationRetreival\Assignment4\index.idx	 F:\Fall2017\InformationRetreival\Assignment4\cacm.corpus
+
+galago.bat search F:\Fall2017\InformationRetreival\Assignment4\index.idx	 F:\Fall2017\InformationRetreival\Assignment4\cacm.corpus
+
+galago.bat eval --judgments=F:\Fall2017\InformationRetreival\Assignment4\cacm.rel --baseline=F:\Fall2017\InformationRetreival\Assignment4\cacm_baseline.list 
+
+galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\cacm_baseline.list F:\Fall2017\InformationRetreival\Assignment4\cacm.rel >F:\Fall2017\InformationRetreival\Assignment4\evaluation_output.txt
+galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\cacm_baseline.list F:\Fall2017\InformationRetreival\Assignment4\cacm.rel --metrics+NDCG5
+
+galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=10 F:\Fall2017\InformationRetreival\Assignment4\cacm.query.xml > F:\Fall2017\InformationRetreival\Assignment4\cacm_baseline.list
+
+galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=10 F:\Fall2017\InformationRetreival\Assignment4\Problem8_3\onequery.xml > F:\Fall2017\InformationRetreival\Assignment4\cacm_onequery.list
+
+galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\Problem8_3\cacm_onequery.list F:\Fall2017\InformationRetreival\Assignment4\cacm.rel >F:\Fall2017\InformationRetreival\Assignment4\Problem8_3\onequeryoutput.txt
+
+galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=10 F:\Fall2017\InformationRetreival\Assignment4\Problem8_4\onequery.xml > F:\Fall2017\InformationRetreival\Assignment4\Problem8_4\cacm_onequery.list
+
+
+galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=5 F:\Fall2017\InformationRetreival\Assignment4\cacm.query.xml > F:\Fall2017\InformationRetreival\Assignment4\cacm_baseline5.list
+
+galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\cacm_baseline5.list F:\Fall2017\InformationRetreival\Assignment4\cacm.rel >F:\Fall2017\InformationRetreival\Assignment4\evaluation_output5.txt
+
+galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=51 F:\Fall2017\InformationRetreival\Assignment4\cacm.query.xml > F:\Fall2017\InformationRetreival\Assignment4\Problem8_7\cacm_baseline.list
+
+galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\Problem8_7\cacm_baseline.list F:\Fall2017\InformationRetreival\Assignment4\cacm.rel >F:\Fall2017\InformationRetreival\Assignment4\Problem8_7\queryoutput.txt
+
+galago.bat batch-search --index=F:\Fall2017\InformationRetreival\Assignment4\index.idx --count=10 F:\Fall2017\InformationRetreival\Assignment4\Problem8_9\onequery.xml > F:\Fall2017\InformationRetreival\Assignment4\Problem8_9\cacm_baseline.list
+
+galago.bat eval F:\Fall2017\InformationRetreival\Assignment4\Problem8_9\cacm_baseline.list F:\Fall2017\InformationRetreival\Assignment4\cacm.rel >F:\Fall2017\InformationRetreival\Assignment4\Problem8_9\queryoutput.txt
