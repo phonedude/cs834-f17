@@ -33,7 +33,7 @@ Place: Dragas, r. 1117 (with option to move rooms after the first class)
 * Week 12 - November 16 - [Chapter 9](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap9-mln.pptx)
 * Week 13 - November 23 - (Thanksgiving -- no class)
 * Week 14 - November 30 - Student Presentations 4
-* Week 15 - December 7 - [Chapter 10] (https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap10-mln.pptx)
+* Week 15 - December 7 - [Chapter 10](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap10-mln.pptx)
 * Week 16 - December 14 - Exam Week -- Student Presentations 5
 
 
