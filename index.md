@@ -33,7 +33,7 @@ Place: Dragas, r. 1117 (with option to move rooms after the first class)
 * Week 12 - November 16 - [Chapter 9](https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap9-mln.pptx)
 * Week 13 - November 23 - (Thanksgiving -- no class)
 * Week 14 - November 30 - Student Presentations 4
-* Week 15 - December 7 - Chapter 10 
+* Week 15 - December 7 - [Chapter 10] (https://raw.githubusercontent.com/phonedude/cs834-f17/master/slides/chap10-mln.pptx)
 * Week 16 - December 14 - Exam Week -- Student Presentations 5
 
 
@@ -42,5 +42,5 @@ Place: Dragas, r. 1117 (with option to move rooms after the first class)
 * Assignment 2: [due 2017-10-12](https://github.com/phonedude/cs834-f17/blob/master/assignments/a2.txt)
 * Assignment 3: [due 2017-11-09](https://github.com/phonedude/cs834-f17/blob/master/assignments/a3.txt)
 * Assignment 4: [due 2017-11-30](https://github.com/phonedude/cs834-f17/blob/master/assignments/a4.txt)
-* Assignment 5: due 2017-12-14
+* Assignment 5: [due 2017-12-14](https://github.com/phonedude/cs834-f17/blob/master/assignments/a5.txt)
 
