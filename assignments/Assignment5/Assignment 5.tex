@@ -144,7 +144,7 @@ Node & PageRank            & Hub                 & Authority           \\
 \end{table}
 
 \section{Discussion}
-A node with higher pagerank  is considered as a better result while a page with high hub value tells that is has high number of inlinks and a page with high authority values tells that it has high number of outlinks. Based on this idea, the results on the graph suggests that node 6 has the best page rank and most number of inlinks but node 3 has moth number of outlinks. The node 7 which has no inlinks and outlinks. The pages without any inlinks and outlinks have a hub and authority value of 0 but the page rank value is equal to the reciprocal of the number of nodes. 
+A node with higher pagerank  is considered as a better result. A page with high hub value tells that it points good authorities. A page with high authority values tells that it is pointed by good hubs. Based on this idea, the results on the graph suggests that node 6 has the best page rank and best authority value. Both the techniques PageRank and HITS algorithm suggest node 6 to be most relevant to the query. Node 3 has highest value of hub suggesting it points to the best authorities. The node 7 which has no inlinks and outlinks has low pagerank, hub and authority value. The pages without any inlinks and outlinks have a hub and authority value of 0 but the page rank value is equal to the reciprocal of the number of nodes. 
 
 \chapter{Problem 10.5}
 \section{Problem Statement}
@@ -152,7 +152,7 @@ Find a community-based question answering site on the Web and ask two questions,
 \section{Solution}
 One obvious example of community-based question answering site is Stack Overflow. I have framed my understanding of low-quality and high-quality questions with the partial information provided in the book. Low-quality question refers to questions which are generic, grammatically incorrect or vague in their idea while the high-quality question refers to questions which are specific and well-structured. For this question, I have reused the questions I asked previously from my profile at Stack Overflow.
 \subsection{Low-Quality Question}
-I judged my question to be low-quality on the parameter of ill-structured formation of the question. The question had 466 views on Stack Overflow but no one answered to my query not because of the difficulty of the problem but due to the poor formation of question and vague in the idea of the question. I judged it later in time when I was able to fix the problem which I had asked on Stack Overflow by altering my approach to the question. When I went back and looked at my question I realized I had put forward a question without any context of the problem I was talking about. Although I never received a formal answer to my problem, but a lot of people did suggest me edits to my question to frame a high-quality. 
+I judged my question to be low-quality on the parameter of ill-structured formation of the question. The question had 466 views on Stack Overflow but no one answered to my query not because of the difficulty of the problem but due to the poor formation of question and vagueness in the idea of the question. I judged it later in time when I was able to fix the problem which I had asked on Stack Overflow by altering the question. When I went back and looked at my question I realized I had put forward a question without any context of the problem I was talking about. Although I never received a formal answer to my problem, but a lot of people did suggest me edits to my question to frame a high-quality question. 
 
 \begin{figure}[ht]
   \centering
@@ -162,7 +162,7 @@ I judged my question to be low-quality on the parameter of ill-structured format
 \end{figure} 
 
 \subsection{High-Quality Question}
-I judged this problem to be high-quality on the parameters that it was a very specific question with a clear idea about the problem. I received an answer to my question asking me to debug the code with return status codes and a link to the man page of the function which helped me figure out for the odd behavior in my code. The answer quality for this question was very precise and helpful.   
+I judged this problem to be high-quality on the parameters that it was a very specific question with a clear idea about the problem. I received an answer to my question asking me to debug the code with return status codes and a link to the linux man page of the function which helped me figure out for the odd behavior in my code. The answer quality for this question was very precise and helpful.   
 \begin{figure}[ht]
   \centering
   \includegraphics[width=1\textwidth]{Problem10_5/HighQuality.png}
