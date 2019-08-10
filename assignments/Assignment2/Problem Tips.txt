@@ -1,0 +1,51 @@
+
+Problem 4.3 Estimating corpus size
+
+Estimating search engine index size variability: a 9-year longitudinal study
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4833824/
+
+https://nlp.stanford.edu/IR-book/html/htmledition/index-size-and-estimation-1.html
+
+
+Problem 4.8 Finding Most inlinks
+
+1. Crawl through the pages (Done)
+2. Parsing for href tags (Done)
+3. Written all the links,anchor texts to two files (Done)
+
+4. Store all the links in mongodb with structure:
+   Links - unique ids
+   Frequncy - each time I find a link add the frequncy, keep your table sorted in the frequncy order
+   Get the top 10 by freqency
+   
+5. Anchor Text : Store all in Mogodb
+	Anchor Text - unique Ids
+	Frequncy - each time I find a link add the frequncy, keep your table sorted in the frequncy order
+    Get the top 10 by freqency
+
+Problem 4.9 
+
+Page Rank Explained
+http://www.cs.princeton.edu/~chazelle/courses/BIB/pagerank.html
+
+
+1. Number of outlinks for each pagerank
+2. Pages which outlink to a page
+
+Words in a document
+
+https://stackoverflow.com/questions/265960/best-way-to-strip-punctuation-from-a-string-in-python
+
+https://stackoverflow.com/questions/1936466/beautifulsoup-grab-visible-webpage-text
+
+1. Get text of beautiful soup (Done)
+
+2. Refinement of text:
+* Remove extra text
+ Doctype
+ Comments
+ style
+
+* Remove all special characters
+* Each word is separated by space 

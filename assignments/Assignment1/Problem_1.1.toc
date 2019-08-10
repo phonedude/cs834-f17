@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1}Query Results}{2}
+\contentsline {section}{\numberline {1.1}Query 1: Manchester United}{2}
+\contentsline {subsection}{\numberline {1.1.1}Google Search Results}{2}
+\contentsline {subsection}{\numberline {1.1.2}Bing Search Results}{2}
+\contentsline {subsection}{\numberline {1.1.3}Better Results}{3}
+\contentsline {subsection}{\numberline {1.1.4}Overlap of Results}{3}
+\contentsline {section}{\numberline {1.2}Query 2: Mourinho stats Man Utd}{4}
+\contentsline {subsection}{\numberline {1.2.1}Google Search Results}{4}
+\contentsline {subsection}{\numberline {1.2.2}Bing Search Results}{5}
+\contentsline {subsection}{\numberline {1.2.3}Better Results}{5}
+\contentsline {subsection}{\numberline {1.2.4}Overlap of Results}{5}
+\contentsline {section}{\numberline {1.3}Query 3: Ronaldo}{6}
+\contentsline {subsection}{\numberline {1.3.1}Google Search Results}{6}
+\contentsline {subsection}{\numberline {1.3.2}Bing Search Results}{7}
+\contentsline {subsection}{\numberline {1.3.3}Better Search Results}{7}
+\contentsline {subsection}{\numberline {1.3.4}Overlap of Results}{8}
+\contentsline {section}{\numberline {1.4}Query 4: Mohammed Nauman Sididque}{8}
+\contentsline {subsection}{\numberline {1.4.1}Google Search Results}{8}
+\contentsline {subsection}{\numberline {1.4.2}Bing Search Results}{9}
+\contentsline {subsection}{\numberline {1.4.3}Better Search Results}{9}
+\contentsline {subsection}{\numberline {1.4.4}Overlap of Results}{9}
+\contentsline {chapter}{\numberline {2}Conclusion}{11}
